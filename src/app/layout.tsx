@@ -22,6 +22,13 @@ const fjallaOne = Fjalla_One({
 export const metadata: Metadata = {
   title: "PetShop", //nome do projeto
   description: "Mini portal de PetShop com notícias, produtos e muito mais", //descrição que aparece no buscador do google
+  keywords: ["petshop", "animais", "cachorros", "gatos"],
+  authors: [
+    {
+      name: "Vanessa",
+      url: "https://github.com/VanessaBaldin1",
+    },
+  ],
 };
 
 // o header abaixo é para aparecer em todas as paginas
