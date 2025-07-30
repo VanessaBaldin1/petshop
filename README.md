@@ -11,3 +11,5 @@ Ajustes e exclusões de elementos da instalação padrão do Next.js
 - src/app/page.tsx: página principal (index, Home). Obs.: o nome do arquivo **precisa ser** `page.tsx`, mas o nome interno (na função) pode ser qualquer um.
 
 - `src/app/layout.tsx`: componente/arquivo especial que define a estrutura padrão (layout) para todas a páginas.
+
+## 01_css-global-fonts-favicon-metadados
