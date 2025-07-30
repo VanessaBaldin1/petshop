@@ -5,7 +5,9 @@ export default function Cabecalho() {
   return (
     <>
       <header>
-        <h1>PetShop</h1>
+        <h1>
+          <Link href="/">PetShop</Link>
+        </h1>
         <Menu />
       </header>
     </>
