@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PetShop | Produtos",
+  title: "Produtos | PetShop",
   description: "Conheça nossos Produtos",
 };
 
