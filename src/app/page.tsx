@@ -1,6 +1,8 @@
+import estilos from "./page.module.css";
+
 export default function Home() {
   return (
-    <section>
+    <section className={estilos.conteudo}>
       <h2>Pet Notícias</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolore
