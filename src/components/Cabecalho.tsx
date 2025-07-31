@@ -1,3 +1,5 @@
+//src/components/Cabecalho.tsx
+
 import Link from "next/link";
 import Menu from "./Menu";
 
