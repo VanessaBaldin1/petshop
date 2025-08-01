@@ -1,4 +1,8 @@
-const arrayPosts = [
+//src/data/array-posts.ts
+
+import type { Post } from "../types/Post";
+
+const arrayPosts: Post[] = [
   {
     id: 1,
 
