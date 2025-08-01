@@ -5,11 +5,11 @@ import estilos from "./ListaPosts.module.css";
 
 //Configurando um tipo para este componente e, neste tipo, definimos a prop posts relacionando ela ao tipo Post criado anteriormente.
 
-type ListaPostProps = {
+type ListaPostsProps = {
   posts: Post[];
 };
 
-export default function ListaPosts({ posts }: ListaPostProps) {
+export default function ListaPosts({ posts }: ListaPostsProps) {
   return (
     <div className={estilos.posts}>
       <article>
