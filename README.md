@@ -2,6 +2,8 @@
 
 Projeto de uma aplicação web SPA usando Next.js, Typescript e Supabase (Baas - Back-End as a Service).
 
+## 06_fake-api-usando-json-server-e-aplicando-rota-dinamica
+
 ## 05_home-com-lista-de-posts-a-partir-de-um-array
 
 - Configuração de um novo type `Post.ts`
