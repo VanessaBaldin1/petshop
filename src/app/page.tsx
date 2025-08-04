@@ -15,7 +15,7 @@ export default async function Home() {
   }
 
   const posts: Post[] = await resposta.json();
-  console.log(posts);
+  //agora o posts- que tem o array que vem da api
 
   return (
     <section className={estilos.conteudo}>
@@ -23,7 +23,7 @@ export default async function Home() {
 
       <p>Aqui você encontra as últimas notícias sobre Pets.</p>
 
-      <ListaPosts posts={arrayPosts} />
+      <ListaPosts posts={posts} />
     </section>
   );
 }
