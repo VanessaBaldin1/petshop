@@ -11,7 +11,10 @@ type DetalhePostProps = {
 };
 
 export default async function DetalhePost({ params }: DetalhePostProps) {
-  const resultado = await fetch(`http://localhost:2112/posts`, {
+  const { id } = await params;
+
+  //uma nova consulta usando o awai com fetch
+  const resultado = await fetch(`http://localhost:2112/posts/${id}`, {
     next: { revalidate: 0 },
   });
 
@@ -19,16 +22,17 @@ export default async function DetalhePost({ params }: DetalhePostProps) {
     throw new Error("Erro ao buscar o post " + resultado.statusText);
   }
 
-  const posts: Post = await resultado.json();
+  const post: Post = await resultado.json();
 
-  const { id } = await params;
+  //desestruturação const {titulo, categoria , descrição} = post;
+  // chamada no html é {titulo}
 
   return (
     <article className={estilos.conteudo}>
-      <h2>Titulo...</h2>
+      <h2>{post.titulo}</h2>
       <Container>
-        <h3>Categoria...</h3>
-        <p>Descrição...</p>
+        <h3>{post.categoria}</h3>
+        <p>{post.descricao}</p>
       </Container>
     </article>
   );
