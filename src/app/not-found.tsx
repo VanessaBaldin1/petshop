@@ -17,7 +17,7 @@ export default function Pagina404() {
       <Container>
         <div className={estilos.imagem404}>
           <img
-            src="./images/404.svg"
+            src="/images/404.svg"
             alt="Cachorrinho com cara triste e nariz vermelho com o símbolo de interrogação"
           />
 
