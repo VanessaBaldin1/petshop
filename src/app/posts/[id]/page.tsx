@@ -9,7 +9,10 @@ type DetalhePostProps = {
   params: Promise<{ id: string }>;
 };
 
-export default function DetalhePost({ params }: DetalhePostProps) {
+export default async function DetalhePost({ params }: DetalhePostProps) {
+  const { id } = await params;
+  console.log(id);
+
   return (
     <article className={estilos.conteudo}>
       <h2>Titulo...</h2>
