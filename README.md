@@ -5,6 +5,8 @@ Projeto de uma aplicação web SPA usando Next.js, Typescript e Supabase (Baas -
 ## 06_fake-api-usando-json-server-e-aplicando-rota-dinamica
 
 - Instalação e configuração do `json-server` como dependência de desenvolver: Para instalar `npm install json-server --save-dev`
+- No arquivo pack.json - no script coloca o "api": "json-server --watch db.json --port 2112 --host 0.0.0.
+- Exclusão do array de posts
 - Utilização do `fetch` com `async/await` na página Home para consumir os posts da fake-api
 - Substituição do array fixo de posts por dados da fake-api
 - Configuração de rota dinâmica com carregamento de dados a partir de parâmetros da rota
