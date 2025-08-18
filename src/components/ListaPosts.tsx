@@ -4,6 +4,7 @@ import { Post } from "@/types/Post";
 import estilos from "./ListaPosts.module.css";
 import Link from "next/link";
 import FiltroCategorias from "./FiltroCategorias";
+import { useState } from "react";
 
 //Configurando um tipo para este componente e, neste tipo, definimos a prop posts relacionando ela ao tipo Post criado anteriormente.
 
@@ -14,6 +15,8 @@ type ListaPostsProps = {
 export default function ListaPosts({ posts }: ListaPostsProps) {
   // Gerando novo array de categorias usando map e garantindo que não há repetição de categorias usando spread e new Set.
   const categorias = [...new Set(posts.map((post) => post.categoria))];
+
+  const [categoriaAtiva, setCategoriaAtiva] = useState();
 
   return (
     <>
