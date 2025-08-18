@@ -18,7 +18,13 @@ export default function ListaPosts({ posts }: ListaPostsProps) {
   //Definindo o state com tipos null (quando não há categoria selecionada) ou string (que é o tipo para nomes/textos referentes às categorias).
   //Passamos null entre paranteses indicando que por padrão não há categoria selecionada.
   //<> no useState é pra tratar os dados como null e string
-  const [categoriaAtiva, setCategoriaAtiva] = useState<null | string>(null);
+  const [categoriaAtiva, setCategoriaAtiva] = useState<null | string>("saude");
+
+  const postsFiltrados = categoriaAtiva
+    ? posts.filter((post) => post.categoria === categoriaAtiva)
+    : posts;
+
+  console.log(postsFiltrados);
 
   return (
     <>
