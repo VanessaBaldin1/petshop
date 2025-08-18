@@ -2,6 +2,8 @@
 
 Projeto de uma aplicação web SPA usando Next.js, Typescript e Supabase (Baas - Back-End as a Service).
 
+## 08_filtro-de-categorias
+
 ## 07_componentes-SemPosts-e-notFound-da-rota-de-posts
 
 - Criação do components `SemPosts` e aplicação de renderização condicional na page `Home`
