@@ -22,4 +22,6 @@ export async function enviarContato(dadosDoFormulario: FormData) {
   if (error) {
     throw new Error("Não foi possível enviar sua mensagem.Tente mais tarde.");
   }
+
+  //agora volta para o formulario
 }
