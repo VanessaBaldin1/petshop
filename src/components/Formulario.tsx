@@ -3,7 +3,7 @@
 import { useState } from "react";
 import estilos from "./Formulario.module.css";
 import { enviarContato } from "@/lib/enviar-contato";
-import { useFormState, useFormStatus } from "react-dom";
+import { useFormStatus } from "react-dom";
 
 function BotaoEnviar() {
   const { pending } = useFormStatus();
@@ -28,7 +28,7 @@ export default function Formulario() {
 
     try {
       await enviarContato(dadosForm);
-      setMensagem("Mensagem enviado com sucesso!");
+      setMensagem("Mensagem enviada com sucesso!");
       setTipoMensagem("sucesso");
 
       //Reseta os campos dos formulário
@@ -47,6 +47,7 @@ export default function Formulario() {
       <div className={estilos.campo}>
         <label htmlFor="nome">Nome</label>
         <input
+          required
           type="text"
           name="nome"
           id="nome"
@@ -56,6 +57,7 @@ export default function Formulario() {
       <div className={estilos.campo}>
         <label htmlFor="email">E-mail</label>
         <input
+          required
           type="email"
           name="email"
           id="email"
@@ -65,6 +67,7 @@ export default function Formulario() {
       <div className={estilos.campo}>
         <label htmlFor="mensagem">Mensagem:</label>
         <textarea
+          required
           name="mensagem"
           id="mensagem"
           rows={5}
@@ -72,8 +75,14 @@ export default function Formulario() {
         ></textarea>
       </div>
       <div className={estilos.campo}>
+        {/* componente criado na mesma pagina no inicio */}
         <BotaoEnviar />
       </div>
+      {mensagem && (
+        <p className={`${estilos.mensagem} ${estilos[tipoMensagem]}`}>
+          {mensagem}
+        </p>
+      )}
     </form>
   );
 }
