@@ -2,6 +2,30 @@
 
 Projeto de uma aplicação web SPA usando Next.js, Typescript e Supabase (Baas - Back-End as a Service).
 
+## 09_migrando-api-para-supabase
+
+### No site supabase.com
+
+- Cadastro no Supabase usando a conta do GitHub
+- Criação e configuração de um projeto dentro do Supabase
+- Criação da tabela `posts` com os campos:
+  - id (uuid), pk
+  - titulo (text), not null
+  - subtitulo (text), not null
+  - descricao (text), not null
+  - categoria (text), not null
+- Importação dos dados para a tabela usando o formato `csv`
+- Adição de um política de segurança para `SELECT` público (parte obrigatório)
+
+### No projeto PetShop (VSCode)
+
+- Instalação da lib `npm install @supabase/supabase-js`
+- Criação do arquivo contendo variáveis de ambientes: `.env.local`, com a aplicação das variáveis `NEXT_PUBLIC_SUPABASE_URL` e
+  `NEXT_PUBLIC_SUPABASE_ANON_KEY`. Obs.: o conteúdo para este arquivo esta pronto em sua conta no SUPABASE, dentro do botão **CONNECT**.
+- Criação da pasta `lib` e do arquivo `supabase.ts`
+
+---
+
 ## 08_filtro-de-categorias
 
 ## Resumo do ciclo de comunicação da prop que passa uma função do pai (ListaPosts) para o filho (FiltroCategorias)
