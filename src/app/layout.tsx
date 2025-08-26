@@ -1,3 +1,4 @@
+// esse arquivo que tem todas as paginas e projeto
 import type { Metadata } from "next";
 import { Roboto, Fjalla_One } from "next/font/google";
 import "./globals.css";
@@ -31,6 +32,13 @@ export const metadata: Metadata = {
       url: "https://github.com/VanessaBaldin1",
     },
   ],
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "petshop",
+    //Se tivessemos ícones específicos para dispositivos Apples, você também colocaria aqui.
+  },
 };
 
 // o header abaixo é para aparecer em todas as paginas
